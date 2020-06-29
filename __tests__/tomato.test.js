@@ -6,6 +6,7 @@ describe('Tomato', () => {
 
   beforeEach(function() {
     tomato = new Tomato();
+    tomato.setWaterLevel();
   });
 
   afterEach(function() {

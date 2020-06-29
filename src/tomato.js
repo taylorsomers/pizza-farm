@@ -4,8 +4,8 @@ export class Tomato {
   }
 
   setWaterLevel() {
-    // setInterval(() => {
-    //   this.waterLevel--;
-    // }, 1000);
+    setInterval(() => {
+      this.waterLevel--;
+    }, 1000);
   }
 }
