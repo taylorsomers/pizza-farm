@@ -13,7 +13,11 @@ export class Tomato {
     this.waterLevel = 30;
   }
 
-  checkTomatoStatus() {
-    
+  setTomatoStatus() {
+    // if (this.waterLevel > 0) {
+    //   this.status = "alive";
+    // } else {
+    //   this.status = "withered";
+    // }
   }
 }

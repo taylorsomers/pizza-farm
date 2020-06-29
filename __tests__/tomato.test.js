@@ -7,6 +7,7 @@ describe('Tomato', () => {
   beforeEach(function() {
     tomato = new Tomato();
     tomato.setWaterLevel();
+    tomato.setTomatoStatus();
   });
 
   afterEach(function() {
@@ -29,6 +30,6 @@ describe('Tomato', () => {
   });
   test('should indicate the crop is alive if waterLevel > 0', () =>{
     jest.advanceTimersByTime(29999);
-    expect(tomato.checkTomatoStatus()).toEqual("alive");
+    expect(tomato.status).toEqual("alive");
   });
 });
