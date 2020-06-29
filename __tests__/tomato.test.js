@@ -38,4 +38,9 @@ describe('Tomato', () => {
     jest.advanceTimersByTime(30001);
     expect(tomato.status).toEqual("withered");
   });
+
+  test('should change tomato harvest status to ready after 2 minutes if status is alive', () =>{
+    jest.advanceTimersByTime(120001);
+    expect(tomato.harvestStatus).toEqual("ready");
+  });
 });
