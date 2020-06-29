@@ -14,10 +14,12 @@ export class Tomato {
   }
 
   setTomatoStatus() {
-    // if (this.waterLevel > 0) {
-    //   this.status = "alive";
-    // } else {
-    //   this.status = "withered";
-    // }
+    setInterval(() => {
+      if (this.waterLevel > 0) {
+        this.status = "alive";
+      } else {
+        this.status = "withered";
+      }
+    }, 1000);
   }
 }
