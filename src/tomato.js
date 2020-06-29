@@ -30,5 +30,9 @@ export class Tomato {
         this.harvestStatus = "ready";
       }
     },120000);
-  }  
+  } 
+  
+  resetHarvestStatus() {
+    this.harvestStatus = "not ready";
+  }
 }
