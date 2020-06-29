@@ -5,7 +5,7 @@ import $ from "jquery";
 import { Farmer } from '../src/farmer.js';
 import { Tomato } from '../src/tomato.js';
 
-function harvestCrop(farmer,crop) {
+function harvestCrop(farmer, crop) {
   farmer.addPoint();
   crop.resetHarvestStatus();
 }
@@ -27,8 +27,11 @@ $(document).ready(function() {
   eustace.addCrop(tomato);
   gameOver(eustace);
   $("button#harvest").click(() => {
-    harvestCrop(eustace,tomato);
-    alert(tomato.waterLevel);
+    if (tomato.harvestStatus === "ready") {
+      harvestCrop(eustace, tomato);
+    } else {
+      alert("This crop is not ready to harvest yet!");
+    }
   });
   $("button#water").click(() => {
     tomato.waterTomato();
