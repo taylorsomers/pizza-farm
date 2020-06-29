@@ -11,4 +11,8 @@ describe("Eustace", () => {
     expect(eustace.name).toEqual("Eustace");
   });
 
+  test('should create a new Farmer object with a point value of zero', () => {
+    expect(eustace.points).toEqual(0);
+  });
+
 });
