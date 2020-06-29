@@ -55,7 +55,11 @@ SECOND:
 
   | Program Behavior | Example Behavior | Example Output |
   | ----------- | ----------- | ----------- |
-  |  |  |  |
+  | Program will generate a crop that will grow over time if the user waters it. |  |  |
+  | Crop will die if the user does not water it for 30 seconds. |  |  |
+  | After two minutes, the user may harvest the crop to get a point. |  |  |
+  | Once the user has acquired three points, the user wins. |  |  |
+  | If the user does not harvest their crop within one minute of its becoming ready to harvest, the crop will wither and the user will starve. |  |  |
   
 
 ## Known Bugs
