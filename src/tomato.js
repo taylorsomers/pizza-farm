@@ -8,4 +8,8 @@ export class Tomato {
       this.waterLevel--;
     }, 1000);
   }
+
+  waterTomato() {
+    // this.waterLevel = 30;
+  }
 }
