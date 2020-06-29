@@ -1,6 +1,7 @@
 export class Tomato {
   constructor(){
     this.waterLevel = 30;
+    this.harvestStatus = "not ready";
   }
 
   setWaterLevel() {
@@ -22,4 +23,12 @@ export class Tomato {
       }
     }, 1000);
   }
+
+  setHarvestStatus() {
+    setInterval(() => {
+      if(this.status === "alive") {
+        this.harvestStatus = "ready";
+      }
+    },120000);
+  }  
 }
