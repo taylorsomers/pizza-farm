@@ -8,6 +8,7 @@ describe('Tomato', () => {
     tomato = new Tomato();
     tomato.setWaterLevel();
     tomato.setTomatoStatus();
+    tomato.setHarvestStatus();
   });
 
   afterEach(function() {
@@ -39,8 +40,10 @@ describe('Tomato', () => {
     expect(tomato.status).toEqual("withered");
   });
 
-  test('should change tomato harvest status to ready after 2 minutes if status is alive', () =>{
-    jest.advanceTimersByTime(120001);
+  test('should change tomato harvest status to ready after 2 minutes if status is alive', () => {
+    jest.advanceTimersByTime(119000);
+    tomato.waterTomato();
+    jest.advanceTimersByTime(2000);
     expect(tomato.harvestStatus).toEqual("ready");
   });
 });
