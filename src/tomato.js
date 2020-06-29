@@ -12,4 +12,8 @@ export class Tomato {
   waterTomato() {
     this.waterLevel = 30;
   }
+
+  checkTomatoStatus() {
+    
+  }
 }
