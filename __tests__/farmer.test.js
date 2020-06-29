@@ -15,4 +15,9 @@ describe("Eustace", () => {
     expect(eustace.points).toEqual(0);
   });
 
+  test('should add a point to the Farmer object', () => {
+    eustace.addPoint();
+    expect(eustace.points).toEqual(1);
+  });
+
 });
