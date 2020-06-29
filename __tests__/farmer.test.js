@@ -1,4 +1,5 @@
 import { Farmer } from './../src/farmer.js';
+import { Tomato } from './../src/tomato.js';
 
 describe("Eustace", () => {
   let eustace;
@@ -20,4 +21,9 @@ describe("Eustace", () => {
     expect(eustace.points).toEqual(1);
   });
 
+  test('should add a crop to the cropArray property', () => {
+    const tomato = new Tomato();
+    eustace.addCrop(tomato);
+    expect(eustace.cropArray).toEqual([tomato]);
+  });
 });
