@@ -1,4 +1,5 @@
 export class Farmer {
-  constructor(){
+  constructor(name){
+    this.name = name;
   }
 }
