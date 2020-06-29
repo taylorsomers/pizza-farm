@@ -46,4 +46,10 @@ describe('Tomato', () => {
     jest.advanceTimersByTime(2000);
     expect(tomato.harvestStatus).toEqual("ready");
   });
+
+  test('should change tomato harvest status from ready to not ready', () => {
+    tomato.harvestStatus = "ready";
+    tomato.resetHarvestStatus();
+    expect(tomato.harvestStatus).toEqual("not ready");
+  });
 });
