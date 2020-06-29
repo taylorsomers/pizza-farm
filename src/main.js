@@ -10,12 +10,27 @@ function harvestCrop(farmer,crop) {
   crop.resetHarvestStatus();
 }
 
-const eustace = new Farmer("Eustace");
-const tomato = new Tomato();
+function gameOver(farmer) {
+  setInterval(() => {
+    for (let i = 0; i < farmer.cropArray.length; i++) {
+      if (farmer.cropArray[i].status === "withered") {
+        alert("GAME OVER");
+        break;
+      }
+    }
+  }, 1000);
+}
 
 $(document).ready(function() {
+  const eustace = new Farmer("Eustace");
+  const tomato = new Tomato();
+  eustace.addCrop(tomato);
+  gameOver(eustace);
   $("button#harvest").click(() => {
     harvestCrop(eustace,tomato);
-    alert(tomato.harvestStatus);
+    alert(tomato.waterLevel);
+  });
+  $("button#water").click(() => {
+    tomato.waterTomato();
   });
 });
