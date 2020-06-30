@@ -1,16 +1,3 @@
-Get Started:
-
-SECOND:
-  $ npm install
-  $ npm install dotenv-webpack --save-dev
-  $ git init
-  $ git add .gitignore
-  $ git commit -m "Activate .gitignore"
-  $ npm run build
-  $ git add .
-  $ git commit -m "Initial global commit"
-  $ npm run start
-
 # Pizza Farm
 
   ### Taylor Somers & Beverly Potts
