@@ -1,15 +1,15 @@
 export class Crop {
-  constructor(){
+  constructor(decrement, milliseconds){
     this.waterLevel = 30;
     this.harvestStatus = "not ready";
-    this.setWaterLevel();
+    this.setWaterLevel(decrement);
     this.setCropStatus();
-    this.setHarvestStatus();
+    this.setHarvestStatus(milliseconds);
   }
 
-  setWaterLevel() {
+  setWaterLevel(decrement) {
     setInterval(() => {
-      this.waterLevel--;
+      this.waterLevel -= decrement;
     }, 1000);
   }
 
@@ -27,12 +27,12 @@ export class Crop {
     }, 1000);
   }
 
-  setHarvestStatus() {
+  setHarvestStatus(milliseconds) {
     setInterval(() => {
       if(this.status === "alive") {
         this.harvestStatus = "ready";
       }
-    }, 60000);
+    }, milliseconds);
   }
   
   resetHarvestStatus() {
