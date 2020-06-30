@@ -21,11 +21,27 @@ function gameOver(farmer) {
   }, 1000);
 }
 
+function waterMeter(crop) {
+  setInterval(() => {
+    if (crop.waterLevel > 20) {
+      $("div.water-meter").html("<p id='good'>Good!</p>");
+    } else if (crop.waterLevel > 10) {
+      $("div.water-meter").html("<p id='thirsty'>Getting Thirsty!</p>");
+    } else {
+      $("div.water-meter").html("<p id='withering'>Withering!</p>");
+    }
+  });
+}
+
 $(document).ready(function() {
   const eustace = new Farmer("Eustace");
   const tomato = new Tomato();
   eustace.addCrop(tomato);
+  waterMeter(tomato);
   gameOver(eustace);
+  if (tomato.waterLevel > 20) {
+    $("div.water-meter").html("<p>Good!</p>");
+  }
   $("button#harvest").click(() => {
     if (tomato.harvestStatus === "ready") {
       harvestCrop(eustace, tomato);
