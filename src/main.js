@@ -11,12 +11,18 @@ function harvestCrop(farmer, crop) {
 }
 
 function gameOver(farmer) {
-  setInterval(() => {
+  const myTimer = setInterval(() => {
     for (let i = 0; i < farmer.cropArray.length; i++) {
       if (farmer.cropArray[i].status === "withered") {
-        alert("GAME OVER");
-        break;
+        clearInterval(myTimer);
+        alert("Game Over!");
+        location.reload();
       }
+    }
+    if (farmer.points === 2) {
+      clearInterval(myTimer);
+      alert("You Win!");
+      location.reload();
     }
   }, 1000);
 }

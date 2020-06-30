@@ -32,7 +32,7 @@ export class Tomato {
       if(this.status === "alive") {
         this.harvestStatus = "ready";
       }
-    },120000);
+    },60000);
   }
   
   resetHarvestStatus() {
