@@ -45,7 +45,7 @@
   | Program will generate a crop that will grow over time if the user waters it. | "const tomato = new Tomato(); tomato;" | "Tomato {waterLevel: 30}" |
   | Crop will die if the user does not water it for 30 seconds. | "(@T=31s)" | "GAME OVER" |
   | After two minutes, the user may harvest the crop to get a point. | "(@T=121s) Click 'Harvest'" | "Points: 1" |
-  | Once the user has acquired three points, the user wins. |  |  |
+  | Once the user has acquired two points, the user wins. | "Points > 2" | "Alert: You Win!" |
   | If the user does not harvest their crop within one minute of its becoming ready to harvest, the crop will wither and the user will starve. |  |  |
   
 
