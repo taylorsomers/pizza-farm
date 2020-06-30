@@ -4,12 +4,11 @@
 
 ## Description
 
-  [Description of program functionality & intent presented as an elevator pitch.]
+  This program is a work-in-progress with basic functionality as a farming game that allows the user to water a plant and get a point each time the plant is harvested. The plant must be watered at least once every thirty seconds to keep it alive. The program was created using JavaScript in a WebPack environment, with particular emphasis on the Red-Green-Refactor testing and development process.
 
 ## Languages & Technologies Used:
 
   ### Programming Languages & Libraries
-  * Bootstrap
   * CSS
   * HTML
   * JavaScript
@@ -46,12 +45,12 @@
   | Crop will die if the user does not water it for 30 seconds. | "(@T=31s)" | "GAME OVER" |
   | After two minutes, the user may harvest the crop to get a point. | "(@T=121s) Click 'Harvest'" | "Points: 1" |
   | Once the user has acquired two points, the user wins. | "Points > 2" | "Alert: You Win!" |
-  | If the user does not harvest their crop within one minute of its becoming ready to harvest, the crop will wither and the user will starve. |  |  |
+  | If the user does not harvest their crop within thirty seconds of its becoming ready to harvest, the crop will wither and the user will starve. |  |  |
   
 
 ## Known Bugs
 
-  * No known bugs at this time. If any are discovered, please feel free to reach out and let me know. If you would like to contribute any fixes or improvements, please do!
+  * No known bugs at this time, apart from the program being incomplete. If any are discovered, please feel free to reach out and let me know. If you would like to contribute any fixes or improvements, please do!
 
 ### Contributors
 
