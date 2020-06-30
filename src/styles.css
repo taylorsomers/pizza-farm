@@ -2,6 +2,14 @@
   background-color: green;
 }
 
+#not-ready {
+  background-color: orange;
+}
+
+#ready {
+  background-color: green;
+}
+
 #thirsty {
   background-color: orange;
 }

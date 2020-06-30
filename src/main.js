@@ -30,7 +30,17 @@ function waterMeter(crop) {
     } else {
       $("div.water-meter").html("<p id='withering'>Withering!</p>");
     }
-  });
+  }, 0);
+}
+
+function harvestMeter(crop) {
+  setInterval(() => {
+    if(crop.harvestStatus === "not ready") {
+      $("div.harvest-meter").html("<p id='not-ready'>Not Ready!</p>");
+    } else {
+      $("div.harvest-meter").html("<p id='ready'>Ready!</p>");
+    }
+  }, 0);
 }
 
 $(document).ready(function() {
@@ -38,10 +48,8 @@ $(document).ready(function() {
   const tomato = new Tomato();
   eustace.addCrop(tomato);
   waterMeter(tomato);
+  harvestMeter(tomato);
   gameOver(eustace);
-  if (tomato.waterLevel > 20) {
-    $("div.water-meter").html("<p>Good!</p>");
-  }
   $("button#harvest").click(() => {
     if (tomato.harvestStatus === "ready") {
       harvestCrop(eustace, tomato);
